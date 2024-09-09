@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: hiveTable
+  datasource:
+    # 数据服务数据源
+    db1:
+      jdbcUrl: jdbc:mysql://47.96.17.2:3306/aj_report?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: 1234
+      driverClassName: com.mysql.cj.jdbc.Driver
+    # 数据治理数据源
+    db2:
+      jdbcUrl: jdbc:mysql://47.101.156.128:3306/data_cloud?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+      username: root
+      password: 1234@abcd
+      driverClassName: com.mysql.cj.jdbc.Driver
+
+
+server:
+  port: 9000
+
+hive:
+  url: "jdbc:hive2://118.178.178.236:10000/db_population"
+  user: "hadoop"
+  password: "sa123"
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
